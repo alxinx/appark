@@ -12,9 +12,10 @@ const registerAdmin = (req, res)=>{
     });
 }
 
-const registro = (req, res)=>{
-    console.log(req.body);
-}
+const registro = async(req, res)=>{
+    const usuario = await Usuario.create(req.body);
+    res.json(usuario);
+};
 
 const forgotAdmin = (req, res)=>{
     res.render("./auth/forgot", {

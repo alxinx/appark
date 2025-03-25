@@ -1,18 +1,18 @@
 import Sequelize, { DataTypes } from "sequelize";
 import db from "../config/db.js";
 const Vehiculo = db.define('vehiculos', {
-        IDVEHICULO : {
+        idVehiculo : {
                 type : DataTypes.INTEGER,
                 autoIncrement : true,
                 allowNull : false,
                 primaryKey : true
             },
-        PLACA : {
+        placa : {
             type : DataTypes.STRING(10),
             allowNull : false,
             unique : true
         }, 
-        FECHAREGISTRO : {
+        fechaRegistro : {
             type : DataTypes.DATE,
             allowNull : false,
             defaultValue : DataTypes.NOW

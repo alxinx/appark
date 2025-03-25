@@ -2,30 +2,33 @@ import { DataTypes } from "sequelize";
 import db from "../config/db.js";
 
 const  Usuario = db.define('usuarios', {
-    IDUSUARIO : {
-        type : DataTypes.INTEGER(10),
+    idUsuario : {
+        type : DataTypes.INTEGER,
         autoIncrement : true,
         primaryKey : true,
         allowNull : false
 
     },
-    NOMBRE : {
+    name : {
         type : DataTypes.STRING(50),
         allowNull : false
     },
-    EMAIL : {
+    email : {
         type : DataTypes.STRING(100),
         allowNull : false,
     },
-    PASSWORD : {
-        type : DataTypes.STRING(100),
+    password : {
+        type : DataTypes.STRING(250),
         allowNull : false,          
     },
-    TOKEN : {
+    token : {
         type : DataTypes.STRING,
     },
-    CONFIRMADO : DataTypes.BOOLEAN,   
-    
+    confirmado : DataTypes.BOOLEAN,
+
+}, {
+    tableName : "usuarios",
+    timestamps : true 
 });
 
 export default Usuario
