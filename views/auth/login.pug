@@ -1,0 +1,21 @@
+extends ../layout/index
+block contenedor
+    div(class="py-5")
+        h2.text-center.text-2xl.font-extrabold=pagina
+ 
+        .div.mt-8.mx-auto.max-w-md
+            .bg-white.py-8.px-4.shadow
+                form(action="").space-y-5
+                    div 
+                        label(class="text-[#475569]" for="email") Tu Email:
+                        input(type="email" name="email" class="w-full p-3 border border-gray-300 rounded-md rounded-2" placeholder="Cuál es tu email")
+
+                    div
+                        label(class="text-[#475569]" for="password") Tu Contraseña:
+                        input(type="password" name="password" class="w-full p-3 border border-gray-300 rounded-md rounded-2" placeholder="Cuál es tu email")
+                    
+                    input(class="w-full bg-[#4669fa] text-gray-100 p-3 cursor-pointer hover:bg-[#708bf4]" type="submit" name="submit" value="Ingresar")
+
+                    div.flex.item-center.justify-between.mt-4
+                        a(href="/register") Crea una cuenta 
+                        a(href="/forgot") Olvide Contraseña

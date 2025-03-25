@@ -1,0 +1,28 @@
+extends ../layout/index
+block contenedor
+    div(class="py-5")
+        h2.text-center.text-2xl.font-extrabold=pagina
+        .div.mt-8.mx-auto.max-w-md
+            .bg-white.py-8.px-4.shadow
+                form.space-y-5(method = "POST" action="/register")
+                    div 
+                        label(class="text-[#475569]" for="name") Cuál es tu nombre:
+                        input(type="text" name="name" class="w-full p-3 border border-gray-300 rounded-md rounded-2" placeholder="Cuál es tu nombre")
+
+                    div 
+                        label(class="text-[#475569]" for="email") Dime tu  Email:
+                        input(type="email" name="email" class="w-full p-3 border border-gray-300 rounded-md rounded-2" placeholder="Cuál es tu email")
+
+                    div
+                        label(class="text-[#475569]" for="password") Tu Contraseña:
+                        input(type="password" name="password" class="w-full p-3 border border-gray-300 rounded-md rounded-2" placeholder="Una contraseña fácil de recordar, dificil de hackear")
+
+                    div 
+                        label(class="text-[#475569]" for="email") Dame de nuevo la contraseña:
+                        input(type="password" name="password_again" class="w-full p-3 border border-gray-300 rounded-md rounded-2" placeholder="Repite la contraseña que escribiste arriba")
+                    
+                    input(class="w-full bg-[#4669fa] text-gray-100 p-3 cursor-pointer hover:bg-[#708bf4]" type="submit" name="submit" value="Registrarse")
+
+                    div.flex.item-center.justify-between.mt-4
+                        a(href="/") Ya tengo cuenta! quiero ingresar
+                        a(href="/forgot") Olvide Contraseña
